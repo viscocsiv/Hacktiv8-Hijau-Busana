@@ -5,7 +5,7 @@ Membuat website app sebuah brand fashion e-commerce dengan CRUD, menggunakan :
 3. sequelize
 4. postgres
 
-# catatan
+# Catatan
 Untuk push script jangan lupa pull terlebih dahulu (pull untuk menyamakan script di lokal dengan di github) Sebaiknya sebelum Pull, copy folder yang dikerjakan terlebih dahulu untuk backup. Jika terjadi conflict tinggal copy perubahan yang dilakukan ke filenya lagi
 
 ```git pull origin```
