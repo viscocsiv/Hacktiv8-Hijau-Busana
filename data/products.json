@@ -1,13 +1,82 @@
 [
-  { "name": "Product 1", "stock": 100, "price": 50, "UserId": 1 },
-  { "name": "Product 2", "stock": 75, "price": 30, "UserId": 2 },
-  { "name": "Product 3", "stock": 50, "price": 25, "UserId": 3 },
-  { "name": "Product 4", "stock": 120, "price": 60, "UserId": 4 },
-  { "name": "Product 5", "stock": 200, "price": 80, "UserId": 5 },
-  { "name": "Product 6", "stock": 90, "price": 45, "UserId": 6 },
-  { "name": "Product 7", "stock": 60, "price": 35, "UserId": 7 },
-  { "name": "Product 8", "stock": 150, "price": 70, "UserId": 8 },
-  { "name": "Product 9", "stock": 80, "price": 40, "UserId": 9 },
-  { "name": "Product 10", "stock": 110, "price": 55, "UserId": 10 }
+  {
+    "name": "Product 1",
+    "stock": 100,
+    "price": 25,
+    "imgUrl": "https://example.com/product1.jpg",
+    "description": "This is the description for Product 1.",
+    "CategoryId": 1
+  },
+  {
+    "name": "Product 2",
+    "stock": 50,
+    "price": 30,
+    "imgUrl": "https://example.com/product2.jpg",
+    "description": "Product 2 is a great choice for your needs.",
+    "CategoryId": 2
+  },
+  {
+    "name": "Product 3",
+    "stock": 75,
+    "price": 15,
+    "imgUrl": "https://example.com/product3.jpg",
+    "description": "A budget-friendly option, Product 3.",
+    "CategoryId": 3
+  },
+  {
+    "name": "Product 4",
+    "stock": 200,
+    "price": 50,
+    "imgUrl": "https://example.com/product4.jpg",
+    "description": "Product 4 is a top seller!",
+    "CategoryId": 4
+  },
+  {
+    "name": "Product 5",
+    "stock": 60,
+    "price": 40,
+    "imgUrl": "https://example.com/product5.jpg",
+    "description": "Elegant and stylish, Product 5.",
+    "CategoryId": 5
+  },
+  {
+    "name": "Product 6",
+    "stock": 30,
+    "price": 20,
+    "imgUrl": "https://example.com/product6.jpg",
+    "description": "Get your hands on Product 6 now!",
+    "CategoryId": 6
+  },
+  {
+    "name": "Product 7",
+    "stock": 90,
+    "price": 35,
+    "imgUrl": "https://example.com/product7.jpg",
+    "description": "A versatile choice, Product 7.",
+    "CategoryId": 1
+  },
+  {
+    "name": "Product 8",
+    "stock": 120,
+    "price": 60,
+    "imgUrl": "https://example.com/product8.jpg",
+    "description": "High-quality Product 8 for your needs.",
+    "CategoryId": 2
+  },
+  {
+    "name": "Product 9",
+    "stock": 45,
+    "price": 28,
+    "imgUrl": "https://example.com/product9.jpg",
+    "description": "Experience the innovation of Product 9.",
+    "CategoryId": 3
+  },
+  {
+    "name": "Product 10",
+    "stock": 80,
+    "price": 45,
+    "imgUrl": "https://example.com/product10.jpg",
+    "description": "Product 10 is a customer favorite!",
+    "CategoryId": 4
+  }
 ]
-

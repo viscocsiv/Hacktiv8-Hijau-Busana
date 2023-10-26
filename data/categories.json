@@ -4,7 +4,5 @@
     {"name": "Shirt"},
     {"name": "T-Shirt"},
     {"name": "Coat"},
-    {"name": "Jacket"},
-    {"name": "Casual Wear"},
-    {"name": "Dress"}
+    {"name": "Jacket"}
 ]

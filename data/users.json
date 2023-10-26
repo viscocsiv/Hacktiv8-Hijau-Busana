@@ -2,51 +2,61 @@
     {
         "email": "johndoe@gmail.com",
         "password": "johndoe123",
-        "role": "Admin"
+        "role": "Admin",
+        "ProfileId": 1
     },
     {
         "email" : "janesmith@gmail.com",
         "password": "janesmith123",
-        "role" : "Admin"
+        "role" : "Admin",
+        "ProfileId": 2
     },
     {
         "email" : "michaeljohnson@gmail.com",
         "password": "michaeljohnson123",
-        "role" : "User"
+        "role" : "User",
+        "ProfileId": 3
     },
     {
         "email" : "emilydavis@gmail.com",
         "password": "emilydavis123",
-        "role" : "User"
+        "role" : "User",
+        "ProfileId": 4
     },
     {
         "email" : "davidwilson@gmail.com",
         "password": "davidwilson123",
-        "role" : "User"
+        "role" : "User",
+        "ProfileId": 5
     },
     {
         "email" : "sarahbrown@gmail.com",
         "password": "sarahbrown123",
-        "role" : "User"
+        "role" : "User",
+        "ProfileId": 6
     },
     {
         "email" : "robertlee@gmail.com",
         "password": "robertlee123",
-        "role" : "User"
+        "role" : "User",
+        "ProfileId": 7
     },
     {
         "email" : "oliviahall@gmail.com",
         "password": "oliviahall123",
-        "role" : "User"
+        "role" : "User",
+        "ProfileId": 8
     },
     {
         "email" : "williamharis@gmail.com",
         "password": "williamharis123",
-        "role" : "User"
+        "role" : "User",
+        "ProfileId": 9
     },
     {
         "email" : "avamartin@gmail.com",
-        "password": "avamartin",
-        "role" : "User"
+        "password": "avamartin123",
+        "role" : "User",
+        "ProfileId": 10
     }
 ]

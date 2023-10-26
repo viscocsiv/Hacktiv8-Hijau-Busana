@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div>
+        <h1>Product List</h1>
+    </div>
+    <div>
+        <% products.forEach(el => { %>
+            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure><img src="<%= el.imgUrl %>" alt="<%= el.name %>" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title"><%= el.name %></h2>
+                    <p><%= el.description %></p>
+                    <div class="card-actions justify-end">
+                        <a href="/products/:id/detail" class="btn btn-primary">Detail</a>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>
