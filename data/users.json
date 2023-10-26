@@ -1,0 +1,52 @@
+[
+    {
+        "email": "johndoe@gmail.com",
+        "password": "johndoe123",
+        "role": "Admin"
+    },
+    {
+        "email" : "janesmith@gmail.com",
+        "password": "janesmith123",
+        "role" : "Admin"
+    },
+    {
+        "email" : "michaeljohnson@gmail.com",
+        "password": "michaeljohnson123",
+        "role" : "User"
+    },
+    {
+        "email" : "emilydavis@gmail.com",
+        "password": "emilydavis123",
+        "role" : "User"
+    },
+    {
+        "email" : "davidwilson@gmail.com",
+        "password": "davidwilson123",
+        "role" : "User"
+    },
+    {
+        "email" : "sarahbrown@gmail.com",
+        "password": "sarahbrown123",
+        "role" : "User"
+    },
+    {
+        "email" : "robertlee@gmail.com",
+        "password": "robertlee123",
+        "role" : "User"
+    },
+    {
+        "email" : "oliviahall@gmail.com",
+        "password": "oliviahall123",
+        "role" : "User"
+    },
+    {
+        "email" : "williamharis@gmail.com",
+        "password": "williamharis123",
+        "role" : "User"
+    },
+    {
+        "email" : "avamartin@gmail.com",
+        "password": "avamartin",
+        "role" : "User"
+    }
+]
