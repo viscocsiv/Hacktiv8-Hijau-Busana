@@ -11,16 +11,50 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      User.belongsTo(models.Profile);
+      User.belongsToMany(models.Product, { through: 'UserHasProduct'});
     }
   }
   User.init({
-    email: DataTypes.STRING,
-    password: DataTypes.STRING,
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notNull: {
+          args: true,
+          msg: "Please input Email!"
+        },
+        notEmpty: {
+          args: true,
+          msg: "Please input Email"
+        }
+      }
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notNull: {
+          args: true,
+          msg: "Please input Password!"
+        },
+        notEmpty: {
+          args: true,
+          msg: "Please input Password"
+        }
+      }
+    },
     role: DataTypes.STRING,
     ProfileId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'User',
+  });
+  User.addHook('beforeCreate', (user, options) => {
+    user.role = 'User'
+  });
+  User.addHook('beforeUpdate', (user, options) => {
+    user.role = 'User'
   });
   return User;
 };

@@ -1,4 +1,5 @@
 'use strict';
+const {Op} = require('sequelize');
 const {
   Model
 } = require('sequelize');
@@ -11,11 +12,54 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Product.belongsTo(models.Category);
+      Product.belongsToMany(models.User, { through: 'UserHasProduct' });
+    }
+
+    get formatDate() {
+      return this.updatedAt.toLocaleDateString("en-CA");
+    }
+
+    static getAllProductsAvailable(sortBy) {
+      const sort = {
+        attributes: ['name', 'id', 'imgUrl', 'description', 'price', 'stock'],
+        where: {
+          stock: {
+            [Op.gt]: 0
+          }
+        },
+        order: [['id', 'ASC']]
+      }
+
+      if (sortBy) sort.order = [
+        ['price', 'ASC']
+      ];
+
+      const products = Product.findAll(sort);
+      return products;
     }
   }
   Product.init({
     name: DataTypes.STRING,
-    stock: DataTypes.INTEGER,
+    stock: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notNull: {
+          args: true,
+          msg: "Please input Stock"
+        },
+        notEmpty: {
+          args: true,
+          msg: "Please input Stock"
+        },
+        isNumeric: {
+          args: true,
+          msg: "Please input type number to Stock"
+        }
+      }
+    },
+    
     price: DataTypes.INTEGER,
     description: DataTypes.TEXT,
     imgUrl: DataTypes.STRING,

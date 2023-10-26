@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restock Products</title>
+    <%- include('formStyle') %>
+</head>
+<body>
+    <div class="form-container">
+      <h1>Restock <%= product.name %> </h1>
+      <form method="post" action="/products/<%= product.id %>/restock">
+        <div class="form-group">
+          <label for="stock">Stock</label>
+          <input type="number" id="stock" name="stock" value="<%= product.stock %>"/>
+        </div>
+        <button type="submit">Edit Stock</button>
+      </form>
+      <% errorMessage.forEach(el => { %>
+        <ul>
+          <li style="color: red;"><%= el %></li>
+        </ul>
+      <% }) %>
+    </div>
+</body>
+</html>

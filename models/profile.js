@@ -11,12 +11,38 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Profile.hasOne(models.User);
     }
   }
   Profile.init({
-    name: DataTypes.STRING,
-    gender: DataTypes.STRING,
-    birthDate: DataTypes.DATE
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notNull: {
+          args: true,
+          msg: "Please input Name!"
+        },
+        notEmpty: {
+          args: true,
+          msg: "Please input Name"
+        }
+      }
+    },
+    birthDate: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      validate: {
+        notNull: {
+          args: true,
+          msg: "Please input Birth Date!"
+        },
+        notEmpty: {
+          args: true,
+          msg: "Please input Birth Date"
+        }
+      }
+    }
   }, {
     sequelize,
     modelName: 'Profile',

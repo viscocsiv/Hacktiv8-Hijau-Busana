@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body style="background-color:azure">
+    <div>
+        <h1>Store</h1>
+    </div>
+    <div class="sort-btn-container" style="display: flex; flex-direction: row; align-items: center; margin: 30px auto 30px 30px;">
+            <div>
+                <p>Sort by:</p>
+            </div>
+            <div style="border: solid; background-color: black; color: white; border-radius: 10px; padding: 5px;">
+                <a href="/store?sortBy=price">Price</a>
+            </div>
+        </div>
+    <% products.forEach(el => { %>
+    <div class="card w-96 bg-base-100 shadow-xl my-10">
+        <figure class="px-10 pt-10">
+            <img src="<%= el.imgUrl %>" alt="Shoes" class="rounded-xl" />
+        </figure>
+        <div class="card-body items-center text-center">
+            <h2 class="card-title"><%= el.name %></h2>
+            <p><%= el.description %></p>
+            <p><%= formatCurrency(el.price) %></p>
+            <div class="card-actions">
+                <a href="/products/<%= el.id %>/buy" class="btn btn-primary">Buy</a>
+            </div>
+        </div>
+    </div>
+    <% }) %>
+</body>
+</html>

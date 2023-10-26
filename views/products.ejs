@@ -12,18 +12,49 @@
         <h1>Product List</h1>
     </div>
     <div>
-        <% products.forEach(el => { %>
-            <div class="card card-compact w-96 bg-base-100 shadow-xl">
-                <figure><img src="<%= el.imgUrl %>" alt="<%= el.name %>" /></figure>
-                <div class="card-body">
-                    <h2 class="card-title"><%= el.name %></h2>
-                    <p><%= el.description %></p>
-                    <div class="card-actions justify-end">
-                        <a href="/products/:id/detail" class="btn btn-primary">Detail</a>
+        <p style="color: red;"><%= restock %></p>
+    </div>
+    <div>
+        <p style="color: red;"><%= deleted %></p>
+    </div>
+    <div class="overflow-x-auto">
+        <table class="table">
+            <!-- head -->
+            <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Stock</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Last Update</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- row 1 -->
+            <% products.forEach((el, idx) => { %>
+            <tr>
+                <th><%= idx+1 %></th>
+                <td><%= el.name %></td>
+                <td><%= el.stock %></td>
+                <td><%= formatCurrency(el.price) %></td>
+                <td><%= el.Category.name %></td>
+                <td><%= el.formatDate %></td>
+                <td>
+                    <div style="display: flex; flex-direction: row;">
+                        <div>
+                            <a class="btn-primary p-2" href="/products/<%= el.id %>/restock">Restock</a>
+                        </div>
+                        <div>
+                            <a class="btn-warning p-2" href="/products/<%= el.id %>/delete">Delete</a>
+                        </div>
                     </div>
-                </div>
-            </div>
-        <% }) %>
+                </td>
+            </tr>
+            <% }) %>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
