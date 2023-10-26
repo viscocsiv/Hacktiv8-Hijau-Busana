@@ -5,13 +5,15 @@ const app = express();
 const router = express.Router();
 const Controller = require('../controllers/controller');
 
-// router.get('/', Controller.home); // landing page 
+router.get('/', Controller.home); // landing page 
 
-// router.get('/register', Controller.register) // register page => hanya untuk user
+router.get('/register', Controller.register) // register page => hanya untuk user
 
-// router.get('/login', Controller.login) // login page => user dan admin
+router.post('/register', Controller.register) // register page => hanya untuk user
 
-// router.post('/login, Controller.loggedIn)
+router.get('/login', Controller.login) // login page => user dan admin
+
+router.post('/login', Controller.login)
 
 // router.get('/profile', Controller.);
 

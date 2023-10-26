@@ -1,7 +1,7 @@
 [
     {
         "email": "johndoe@gmail.com",
-        "password": "johndoe123",
+        "password": "$2a$12$exeOquOcwxExU02CDHu8VOOVjIZv.fBALQa3JdNV/A7pXwDJyOm0O",
         "role": "Admin",
         "ProfileId": 1
     },
@@ -13,49 +13,49 @@
     },
     {
         "email" : "michaeljohnson@gmail.com",
-        "password": "michaeljohnson123",
+        "password": "$2a$12$70BCsPjWvBwZV77uNdnwp.CQPWK8O0sE2t3YBJ5JQV89BJrZMB3bS",
         "role" : "User",
         "ProfileId": 3
     },
     {
         "email" : "emilydavis@gmail.com",
-        "password": "emilydavis123",
+        "password": "$2a$10$rCf5Uvz5k9z05rvHjOki6e.0JESFffSO1g.8wQXtXF1OoLXP7hAa2",
         "role" : "User",
         "ProfileId": 4
     },
     {
         "email" : "davidwilson@gmail.com",
-        "password": "davidwilson123",
+        "password": "$2a$10$upb/pu/Sb8ZE2K8.xM.6vew1aQmNNaUEih.249dEqcQhGe1ewboO.",
         "role" : "User",
         "ProfileId": 5
     },
     {
         "email" : "sarahbrown@gmail.com",
-        "password": "sarahbrown123",
+        "password": "$2a$10$u2a0SOEc5P3M/N5gVpaqdOMqdzlt4uP.WsoGgcyE0YO4WdiO2o./O",
         "role" : "User",
         "ProfileId": 6
     },
     {
         "email" : "robertlee@gmail.com",
-        "password": "robertlee123",
+        "password": "$2a$10$XAd9UgiKw8aabSEF8jT3COXCJYCBDt2pbgYa9btODD6DmxOPoY73K",
         "role" : "User",
         "ProfileId": 7
     },
     {
         "email" : "oliviahall@gmail.com",
-        "password": "oliviahall123",
+        "password": "$2a$10$t.too.HSXtGIhtgWYeWR4u5vuUYb15ksG8n3C4Txc0eG4C2zOtTFW",
         "role" : "User",
         "ProfileId": 8
     },
     {
         "email" : "williamharis@gmail.com",
-        "password": "williamharis123",
+        "password": "$2a$10$rYwqanAPge5vBKH/OUPkD.2bhbcePMSRNFYzsG4UePtZ12XifRPq.",
         "role" : "User",
         "ProfileId": 9
     },
     {
         "email" : "avamartin@gmail.com",
-        "password": "avamartin123",
+        "password": "$2a$10$97ebfXgw/6q468WvCZcIKuOXgTlzbXhJbvM4KfTAzq1dZYMxVY4TO",
         "role" : "User",
         "ProfileId": 10
     }
