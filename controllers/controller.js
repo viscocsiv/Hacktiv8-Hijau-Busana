@@ -1,5 +1,6 @@
 'use strict';
-const { Product, Profile, User, Tag, ProducHasTag } = require('../models');
+const { Product, Profile, User, Category, UserHasProduct } = require('../models');
+const bcrypt = require('bcryptjs');
 
 
 class Controller {
