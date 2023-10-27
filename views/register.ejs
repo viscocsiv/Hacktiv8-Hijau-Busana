@@ -10,22 +10,22 @@
     <div class="form-container">
       <h1>Register</h1>
       <a href="/">Back to Home</a>
-      <form method="post" action="/register">
+      <form method="post" action="/register" required>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email"/>
+          <input type="email" id="email" name="email" required/>
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" id="password" name="password"/>
+          <input type="password" id="password" name="password" required/>
         </div>
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name"/>
+          <input type="text" id="name" name="name" required/>
         </div>
         <div class="form-group">
           <label for="birthDate">Birth Date</label>
-          <input type="date" id="birthDate" name="birthDate"/>
+          <input type="date" id="birthDate" name="birthDate" required/>
         </div>
         <button type="submit">Register</button>
       </form>
