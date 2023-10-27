@@ -35,7 +35,7 @@
             <div>
                 <div id="qrcode-2"></div>
                 <script type="text/javascript">
-                    var qrcode = new QRCode(document.getElementById("qrcode-2"), {
+                    let qrcode = new QRCode(document.getElementById("qrcode-2"), {
                         text: "/products/<%= el.id %>/buy",
                         width: 50,
                         height: 50,
