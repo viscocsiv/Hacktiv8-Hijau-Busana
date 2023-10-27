@@ -16,11 +16,13 @@
         </div>
         <button type="submit">Edit Stock</button>
       </form>
-      <% errorMessage.forEach(el => { %>
-        <ul>
-          <li style="color: red;"><%= el %></li>
-        </ul>
-      <% }) %>
+      <% if (errorMessage) { %>
+        <% errorMessage.forEach(el => { %>
+          <ul>
+            <li style="color: red;"><%= el %></li>
+          </ul>
+        <% }) %>
+      <% } %>
     </div>
 </body>
 </html>
