@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Store</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.3/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
 </head>
 <body style="background-color:azure">
     <div>
@@ -30,6 +31,19 @@
             <p><%= formatCurrency(el.price) %></p>
             <div class="card-actions">
                 <a href="/products/<%= el.id %>/buy" class="btn btn-primary">Buy</a>
+            </div>
+            <div>
+                <div id="qrcode-2"></div>
+                <script type="text/javascript">
+                    var qrcode = new QRCode(document.getElementById("qrcode-2"), {
+                        text: "/products/<%= el.id %>/buy",
+                        width: 50,
+                        height: 50,
+                        colorDark : "#5868bf",
+                        colorLight : "#ffffff",
+                        correctLevel : QRCode.CorrectLevel.H
+                    });
+                </script>
             </div>
         </div>
     </div>
