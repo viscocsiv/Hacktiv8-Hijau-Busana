@@ -1,5 +1,5 @@
 'use strict';
-const {Op} = require('sequelize');
+const { Op } = require('sequelize');
 const {
   Model
 } = require('sequelize');
@@ -59,7 +59,7 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
-    
+
     price: DataTypes.INTEGER,
     description: DataTypes.TEXT,
     imgUrl: DataTypes.STRING,

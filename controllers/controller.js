@@ -84,6 +84,15 @@ class Controller {
         }
     }
 
+    // static async buy(req, res) {
+    //     try {
+
+    //     } catch (error) {
+    //         console.log(error);
+    //         res.send(error.message);
+    //     }
+    // }
+
     static async showProducts(req, res) {
         try {
             const { restock, deleted } = req.query
@@ -98,7 +107,7 @@ class Controller {
                 order: [['stock', 'ASC']]
             });
             // res.send(products);
-            res.render('products', { products, formatCurrency, restock, deleted});
+            res.render('products', { products, formatCurrency, restock, deleted });
         } catch (error) {
             console.log(error);
             res.send(error);
@@ -114,7 +123,7 @@ class Controller {
             }
             const { id } = req.params;
             const product = await Product.findOne({
-                attributes: [ 
+                attributes: [
                     'id', 'name', 'stock'
                 ],
                 where: { id }

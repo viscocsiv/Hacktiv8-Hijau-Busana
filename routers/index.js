@@ -17,6 +17,8 @@ router.post('/login', Controller.login);
 
 router.get('/store', Controller.store); // list produk untuk user membeli barang
 
+// router.get('/store/:id/buy', Controller.buy) //
+
 router.get('/products', Controller.showProducts); // list produk untuk admin merestok atau menghapus produk
 
 router.get('/products/:id/restock', Controller.showRestockForm); // form restok
