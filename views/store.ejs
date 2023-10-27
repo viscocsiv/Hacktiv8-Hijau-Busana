@@ -6,47 +6,135 @@
     <title>Store</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.3/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <style>
+        body {
+            background-color: azure;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #333;
+            text-align: center;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .header-button {
+            background-color: navajowhite;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .header-button:hover {
+            background-color: tan;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 30px auto 30px 30px;
+        }
+
+        .sort-btn {
+            border: 2px solid black;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+
+        .sort-btn a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            width: 300px;
+            background-color: #f0f0f0;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .card-body p {
+            margin: 10px;
+        }
+
+        .btn {
+            background-color: #3490dc;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #2779bd;
+        }
+    </style>
 </head>
-<body style="background-color:azure">
+<body>
+    <header>
+        <h1>Welcome to Hijau Busana</h1>
+    </header>
     <div>
-        <h1>Store</h1>
+        <nav>
+            <a href="/">Logout</a>
+        </nav>
     </div>
-    <div class="sort-btn-container" style="display: flex; flex-direction: row; align-items: center; margin: 30px auto 30px 30px;">
-            <div>
-                <p>Sort by:</p>
-            </div>
-            <div style="border: solid; background-color: black; color: white; border-radius: 10px; padding: 5px;">
-                <a href="/store?sortBy=price">Price</a>
-            </div>
+    
+    <div class="container">
+        <div>
+            <p>Sort by:</p>
         </div>
-    <% products.forEach(el => { %>
-    <div class="card w-96 bg-base-100 shadow-xl my-10">
-        <figure class="px-10 pt-10">
-            <img src="<%= el.imgUrl %>" alt="Shoes" class="rounded-xl" />
-        </figure>
-        <div class="card-body items-center text-center">
-            <h2 class="card-title"><%= el.name %></h2>
-            <p><%= el.description %></p>
-            <p><%= formatCurrency(el.price) %></p>
-            <div class="card-actions">
-                <a href="/products/<%= el.id %>/buy" class="btn btn-primary">Buy</a>
-            </div>
-            <div>
-                <div id="qrcode-2"></div>
-                <script type="text/javascript">
-                    let qrcode = new QRCode(document.getElementById("qrcode-2"), {
-                        text: "/products/<%= el.id %>/buy",
-                        width: 50,
-                        height: 50,
-                        colorDark : "#5868bf",
-                        colorLight : "#ffffff",
-                        correctLevel : QRCode.CorrectLevel.H
-                    });
-                </script>
-            </div>
+        <div class="sort-btn">
+            <a href="/store?sortBy=price">Price</a>
         </div>
     </div>
-    <% }) %>
+    <div class="cards">
+        <% products.forEach(el => { %>
+        <div class="card">
+            <figure>
+                <img src="<%= el.imgUrl %>" alt="Product" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title"><%= el.name %></h2>
+                <p><%= el.description %></p>
+                <p><%= formatCurrency(el.price) %></p>
+                <div class="card-actions">
+                    <a href="/products/<%= el.id %>/buy" class="btn">Buy</a>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
 </body>
 </html>

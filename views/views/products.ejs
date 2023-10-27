@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div>
+        <h1>Product List</h1>
+    </div>
+    <div>
+        <p style="color: red;"><%= restock %></p>
+    </div>
+    <div>
+        <p style="color: red;"><%= deleted %></p>
+    </div>
+    <div class="overflow-x-auto">
+        <table class="table">
+            <!-- head -->
+            <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Stock</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Last Update</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- row 1 -->
+            <% products.forEach((el, idx) => { %>
+            <tr>
+                <th><%= idx+1 %></th>
+                <td><%= el.name %></td>
+                <td><%= el.stock %></td>
+                <td><%= formatCurrency(el.price) %></td>
+                <td><%= el.Category.name %></td>
+                <td><%= el.formatDate %></td>
+                <td>
+                    <div style="display: flex; flex-direction: row;">
+                        <div>
+                            <a class="btn-primary p-2" href="/products/<%= el.id %>/restock">Restock</a>
+                        </div>
+                        <div>
+                            <a class="btn-warning p-2" href="/products/<%= el.id %>/delete">Delete</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
