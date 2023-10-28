@@ -1,52 +1,42 @@
 [
   {
     "name": "John Doe",
-    "gender": "Male",
     "birthDate": "1990-03-15"
   },
   {
     "name": "Jane Smith",
-    "gender": "Female",
     "birthDate": "1985-07-20"
   },
   {
     "name": "Michael Johnson",
-    "gender": "Male",
     "birthDate": "1995-11-10"
   },
   {
     "name": "Emily Davis",
-    "gender": "Female",
     "birthDate": "1988-05-02"
   },
   {
     "name": "David Wilson",
-    "gender": "Male",
     "birthDate": "1982-09-25"
   },
   {
     "name": "Sarah Brown",
-    "gender": "Female",
     "birthDate": "1992-12-18"
   },
   {
     "name": "Robert Lee",
-    "gender": "Male",
     "birthDate": "1998-01-30"
   },
   {
     "name": "Olivia Hall",
-    "gender": "Female",
     "birthDate": "1987-06-12"
   },
   {
     "name": "William Harris",
-    "gender": "Male",
     "birthDate": "1993-04-08"
   },
   {
     "name": "Ava Martin",
-    "gender": "Female",
     "birthDate": "1991-08-07"
   }
 ]

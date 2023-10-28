@@ -2,7 +2,6 @@
 const { Product, Profile, User, Category, UserHasProduct } = require('../models');
 const formatCurrency = require('../helpers/formatCurrency')
 const bcrypt = require('bcryptjs');
-const { Op } = require('sequelize')
 
 
 class Controller {
@@ -146,7 +145,7 @@ class Controller {
             await Product.update({ stock }, {
                 where: { id }
             });
-            console.log(product);
+            // console.log(product);
             // res.send(products);
             res.redirect(`/products?restock=${product.name} has been restocked to ${stock}`)
         } catch (error) {
