@@ -1,5 +1,5 @@
 # Hacktiv8-Hijau-Busana
-Membuat website app sebuah brand fashion e-commerce dengan CRUD, menggunakan :
+Membuat website app sebuah clothing store dengan CRUD, menggunakan :
 1. javascript
 2. express
 3. ejs
